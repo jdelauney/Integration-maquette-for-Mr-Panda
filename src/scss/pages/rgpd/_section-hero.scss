@@ -1,13 +1,13 @@
 @use "../../abstracts/mixins" as mixins;
 
-.section-hero {
+.rgpd-section-hero {
   margin: 82.8px auto 0 auto;
   max-width: 846.93px;
   height:500px;
   text-align: center;
   font-family: var(--thm-font);
 
-  h1 {
+  .rgpd-section-hero__title {
     span:first-child {
       display: block;
       text-align: center;
@@ -15,14 +15,23 @@
       font-size: mixins.toEm(20, 60);
       font-weight: 400;
       color: var(--thm-secondary);
+      margin-bottom: 16px;
     }
     font-family: var(--thm-font-2);
     text-align: center;
     font-size: mixins.toEm(60);
+    margin-bottom: 32px;
   }
 
-  p {
+  .rgpd-section-hero__content {
     font-size: mixins.toEm(20);
     font-weight: 600;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .rgpd-section-hero__btn {
+    padding-inline: 32px;
+    padding-block: 12px;
   }
 }
