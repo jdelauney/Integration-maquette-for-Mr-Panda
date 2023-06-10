@@ -9,12 +9,17 @@ $secondary: #73C920;
 $secondary-alt: #76CA24;
 $secondary-text: #FFFFFF;
 
-$neutral-colors: (
-        "neutral-100": #F9FAFB,
-        "neutral-200": #F4F5F5,
-        "neutral-300": #CCCCCD,
-        "neutral-400": #788188,
-        "neutral-500": #595654,
-);
 
+$gray-100: #F9FAFB;
+$gray-200: #F4F5F5;
+$gray-300: #CCCCCD;
+$gray-400: #788188;
+$gray-500: #595654;
+
+
+$default-font-family: "Open Sans", system-ui, sans-serif;
+$alt-font-family: "myriad_proregular",  system-ui, sans-serif;
+
+$headings-font-family: "Work Sans", system-ui, sans-serif;
+$headings-font-weight: 700;
 

@@ -1,0 +1,63 @@
+.rgpd-section-avantages {
+  width: 1469px;
+  background-color: var(--gray-200);
+  padding: 64px 64px 128px 64px;
+  margin: 0 auto;
+
+  &__card-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 92px 0;
+    height: 280px;
+    gap: 10px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 48px 16px;
+    background-color: var(--thm-secondary);
+    color: var(--thm-white);
+    border-radius: 8px;
+    text-align: center;
+    width: 25%;
+
+    &__content {
+      text-align: center;
+      font-size: 20px;
+      font-family: var(--thm-font);
+    }
+    &__icon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--thm-white);
+      margin-bottom: 16px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 46px;
+          height: 46px;
+          border: 2px solid var(--thm-white);
+          border-radius: 50%;
+          background-color: transparent;
+        }
+
+      & > svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--thm-secondary);
+      }
+    }
+  }
+}

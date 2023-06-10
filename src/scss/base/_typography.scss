@@ -1,4 +1,4 @@
-
+@use "../abstracts/mixins" as mixins;
 // Fonts face
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Work+Sans:wght@600;700&display=swap');
@@ -12,8 +12,37 @@
   font-style: normal;
 }
 
-$default-font-family: "Open Sans", system-ui, sans-serif;
-$alt-font-family: "myriad_proregular",  system-ui, sans-serif;
+.section-title {
+  font-family: var(--thm-font-2);
+  font-weight: 700;
+  text-align: center;
+  font-size: mixins.toEm(60);
+  margin-bottom: 32px;
 
-$headings-font-family: "Work Sans", system-ui, sans-serif;
-$headings-font-weight: 700;
+  .section-title__tagline {
+    display: block;
+    text-align: center;
+    font-family: var(--thm-font-3);
+    font-size: mixins.toEm(20, 60);
+    font-weight: 400;
+    color: var(--thm-secondary);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  &--with-separator {
+    position: relative;
+    margin-bottom: 32px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--thm-black);
+    }
+  }
+}
