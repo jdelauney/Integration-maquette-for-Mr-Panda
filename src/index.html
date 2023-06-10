@@ -3,14 +3,102 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./scss/style.scss">
-    <title>Bootstrap w/ Vite</title>
+    <title>RGPD</title>
 </head>
 <body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <button class="btn btn-primary">Primary button</button>
-</div>
+
+    <!-- start hero -->
+    <section class="rgpd-hero">
+        <h1>
+            <span class="mb-3">VOTRE RÔLE EST ESSENTIEL</span>
+            Mise en conformité<br>
+            <span class="text-primary">RGPD</span> de vos clients
+        </h1>
+
+        <p class="text-center mt-4">
+            Accompagnez vos clients vers une mise en conformité réussie au travers d'un service clé en main ! Laissez
+            vous guider, on s'occupe de tout...
+        </p>
+
+        <button class="btn btn-secondary mt-4 px-5 py-3">Prenons rendez-vous !</button>
+    </section>
+    <!-- end hero -->
+
+    <section class="contact-one">
+        <div class="container">
+            <div class="row">
+                <!--Start Contact One Contant-->
+                <div class="col-xl-6 col-lg-7">
+                    <div class="contact-one__content">
+                        <div class="section-title">
+                            <span class="section-title__tagline line-none">AVANÇONS ENSEMBLE !</span>
+                            <h2 class="section-title__title">Contactez-nous
+                                pour échanger
+                                <br>sur
+                                <span>la mise en conformité de vos clients</span>
+                            </h2>
+                        </div>
+                        <p class="contact-one__content-text">Rudy &amp; Carole sont à votre écoute et à votre
+                            disposition</p>
+                        <div class="advice-box">
+                            <p class="sous-titre-green">PRENONS RENDEZ-VOUS !</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End Contact One Contant-->
+
+                <!--Start Contact One Form Box-->
+                <div class="col-xl-6 col-lg-5">
+                    <div class="contact-one__form-box">
+                        <div class="contact-one__form">
+                            <div class="title-box">
+                                <h2>Prenons un rendez-vous</h2>
+                            </div>
+                            <div class="form-box">
+                                <form name="audit" method="post">
+                                    <div id="audit">
+                                        <div class="form-group">
+                                            <input type="text" id="audit_name" name="audit[name]" required="required" placeholder="Nom &amp; Prénom*" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="audit_telephone" name="audit[telephone]" required="required" placeholder="Téléphone*" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="audit_email" name="audit[email]" required="required" placeholder="E-mail*" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea id="audit_message" name="audit[message]" required="required" placeholder="Votre message*" class="form-control"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="audit_rgpd" name="audit[rgpd]" required="required" class="form-check-input" value="1">
+                                                <label class="form-check-label required" for="audit_rgpd">
+                                                    En soumettant
+                                                    ce formulaire, j'accepte que les informations saisies soient
+                                                    exploitées dans le cadre de la demande de devis et de la relation
+                                                    commerciale qui peut en découler
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="audit_page" name="audit[page]" required="required" hidden="hidden" class="form-control">
+                                        </div>
+
+                                        <button type="submit" class="thm-btn contact-one__form-box__btn">Envoyer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Contact One Form Box-->
+            </div>
+        </div>
+    </section>
+
+
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>

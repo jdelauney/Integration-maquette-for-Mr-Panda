@@ -1,0 +1,16 @@
+@use "sass:math";
+// Utilities
+$browser-context-font-size: 16;
+
+@function toEm($pixels, $context: $browser-context-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1em;
+}
+

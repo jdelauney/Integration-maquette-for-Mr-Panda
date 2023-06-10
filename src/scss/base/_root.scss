@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+:root {
+  --thm-font: #{$default-font-family};
+  --thm-font-2: #{$headings-font-family};
+  --thm-font-3: #{$alt-font-family};
+  --thm-white: #ffffff;
+  --thm-black: #{$body-color};
+  --thm-primary: #{$primary};
+  --thm-primary-alt: #{$primary-alt};
+  --thm-primary-text: #{$primary-text};
+  --thm-secondary: #{$secondary-text};
+  --thm-secondary-alt: #{$secondary-alt};
+  --thm-secondary-text: #{$secondary-text};
+}
+

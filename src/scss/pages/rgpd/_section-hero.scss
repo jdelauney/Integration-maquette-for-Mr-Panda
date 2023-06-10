@@ -1,0 +1,28 @@
+@use "../../abstracts/mixins" as mixins;
+
+.section-hero {
+  margin: 82.8px auto 0 auto;
+  max-width: 846.93px;
+  height:500px;
+  text-align: center;
+  font-family: var(--thm-font);
+
+  h1 {
+    span:first-child {
+      display: block;
+      text-align: center;
+      font-family: var(--thm-font-3);
+      font-size: mixins.toEm(20, 60);
+      font-weight: 400;
+      color: var(--thm-secondary);
+    }
+    font-family: var(--thm-font-2);
+    text-align: center;
+    font-size: mixins.toEm(60);
+  }
+
+  p {
+    font-size: mixins.toEm(20);
+    font-weight: 600;
+  }
+}

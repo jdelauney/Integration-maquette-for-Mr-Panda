@@ -1,0 +1,19 @@
+
+// Fonts face
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Work+Sans:wght@600;700&display=swap');
+
+@font-face {
+  font-family: 'myriad_proregular';
+  src: url('../../assets/fonts/myriad_pro_regular-webfont.woff2') format('woff2'),
+  url('../../assets/fonts/myriad_pro_regular-webfont.woff') format('woff'),
+  url('../../assets/fonts/myriad_pro_regular.ttf') format('ttf');;
+  font-weight: normal;
+  font-style: normal;
+}
+
+$default-font-family: "Open Sans", system-ui, sans-serif;
+$alt-font-family: "myriad_proregular",  system-ui, sans-serif;
+
+$headings-font-family: "Work Sans", system-ui, sans-serif;
+$headings-font-weight: 700;

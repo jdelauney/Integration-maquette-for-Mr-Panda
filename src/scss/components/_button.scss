@@ -1,0 +1,33 @@
+.thm-btn {
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--thm-primary);
+  border: none;
+  outline: none !important;
+  color: var(--thm-primary-text);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 12px;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  z-index: 1;
+
+  &:hover {
+    background-color: var(--thm-primary-alt);
+  }
+}
+
+.thm-btn--secondary {
+  background-color: var(--thm-secondary);
+  color: var(--thm-secondary-text);
+
+  &:hover {
+    background-color: var(--thm-secondary-alt);
+  }
+}
+
+
+
