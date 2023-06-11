@@ -12,23 +12,23 @@
   font-style: normal;
 }
 
+.section-title-tagline {
+  display: block;
+  text-align: center;
+  font-family: var(--thm-font-3);
+  font-size: mixins.toEm(20);
+  font-weight: 400;
+  color: var(--thm-secondary);
+  text-transform: uppercase;
+}
+
 .section-title {
   font-family: var(--thm-font-2);
   font-weight: 700;
   text-align: center;
   font-size: mixins.toEm(60);
   margin-bottom: 32px;
-
-  .section-title__tagline {
-    display: block;
-    text-align: center;
-    font-family: var(--thm-font-3);
-    font-size: mixins.toEm(20, 60);
-    font-weight: 400;
-    color: var(--thm-secondary);
-    margin-bottom: 16px;
-    text-transform: uppercase;
-  }
+  margin-top:4px;
 
   &--with-separator {
     position: relative;

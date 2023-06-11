@@ -8,19 +8,11 @@
   font-family: var(--thm-font);
 
   .rgpd-section-hero__title {
-    span:first-child {
-      display: block;
-      text-align: center;
-      font-family: var(--thm-font-3);
-      font-size: mixins.toEm(20, 60);
-      font-weight: 400;
-      color: var(--thm-secondary);
-      margin-bottom: 16px;
-    }
     font-family: var(--thm-font-2);
     text-align: center;
     font-size: mixins.toEm(60);
     margin-bottom: 32px;
+    margin-top:16px;
   }
 
   .rgpd-section-hero__content {
