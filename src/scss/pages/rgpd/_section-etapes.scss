@@ -1,0 +1,189 @@
+@use "../../abstracts/mixins" as mixins;
+
+.rgpd-section-etapes {
+  width:1860px;
+  margin: 128px auto 0 auto;
+  background-image: url("../../../assets/images/background-etape.png");
+  background-repeat: no-repeat;
+  background-position: 35px 550px;
+
+  &__cta-container,
+  &__inner-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 1469px;
+    margin: 0 auto;
+  }
+
+  &__cta-container {
+    margin-top: 196px;
+
+    &__video {
+      position: absolute;
+      top: -48px;
+      left: 0;
+      min-width:670px;
+      min-height: 375px;
+      max-width:670px;
+      max-height: 375px;
+      z-index: 2;
+    }
+
+    &__cta-box {
+      position: relative;
+      box-sizing: border-box;
+      width: 915px;
+      height: 520px;
+      padding: 64px 96px 64px 148px;
+      margin-left: 580px;
+      margin-top: 48px;
+      background-color: var(--thm-primary-alt);
+
+      &::before {
+        position: absolute;
+        box-sizing: border-box;
+        content: "";
+        width: 887px;
+        height: 492px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: 3px solid var(--thm-white);
+      }
+
+      &__title {
+        font-family: var(--thm-font-2);
+        font-size: mixins.toEm(40);
+        font-weight: 700;
+        color: var(--thm-black);
+      }
+
+      & > p {
+        font-family: var(--thm-font);
+        font-size: mixins.toEm(20);
+        font-weight: 600;
+        color: var(--thm-white);
+        margin-bottom: 32px;
+
+        &:last-of-type {
+          margin-bottom: 64px;
+        }
+      }
+
+      &__btn {
+        box-sizing: border-box;
+        width: 355px;
+        height: 64px;
+        background-color: var(--thm-white);
+        color: var(--thm-black);
+        font-size: mixins.toEm(20);
+
+        &:hover {
+          background-color: var(--thm-black);
+          color: var(--thm-white);
+        }
+      }
+
+    }
+  }
+
+  &__badge-price {
+    top:130px;
+    left:0px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    list-style: none;
+    margin-top: 148px;
+    margin-left: 140px;
+    counter-reset: item-etape;
+
+    &__item {
+      position: relative;
+      box-sizing: border-box;
+      max-width: 549px;
+      min-height: 148px;
+      padding: 48px 68px 40px 140px;
+      background-color: var(--gray-200);
+
+      &::after {
+        counter-increment: item-etape;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content:counter(item-etape, decimal-leading-zero);
+        width: 74px;
+        height: 74px;
+        top: 38px;
+        left: 42px;
+        border-radius: 50%;
+        background-color: var(--thm-primary-alt);
+        color: var(--thm-white);
+        font-family: var(--thm-font);
+        font-size: mixins.toEm(30);
+        font-weight: 700;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 46px;
+        height: 135px;
+        top: -90px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+      }
+
+      &:nth-of-type(odd):not(:first-child) {
+        &::before {
+          left: 20px;
+          background-image: url("../../assets/images/etape-shape-left.png");
+        }
+      }
+
+      &:nth-of-type(even) {
+        margin-left:80px;
+
+        &::before {
+          right: 20px;
+          background-image: url("../../assets/images/etape-shape-right.png");
+        }
+      }
+
+      & > span:first-of-type {
+        display: block;
+        font-family: var(--thm-font-2);
+        font-size: mixins.toEm(24);
+        font-weight: 700;
+        color: var(--thm-black);
+      }
+
+      & > p {
+        margin: 0;
+        font-family: var(--thm-font);
+        font-size: mixins.toEm(18);
+        font-weight: 600;
+        line-height: 2;
+        color: var(--thm-black);
+      }
+
+      &--alt {
+        background-color: var(--thm-white);
+        border: 3px dashed var(--thm-muted);
+
+        &::after {
+          background-color: var(--thm-secondary-alt);
+        }
+      }
+    }
+  }
+}

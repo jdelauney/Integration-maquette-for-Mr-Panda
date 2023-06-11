@@ -3,8 +3,11 @@
 
 @forward "components/button";
 
+@forward "pages/shared";
+
 @forward "pages/rgpd/section-hero";
 @forward "pages/rgpd/section-avantages";
 @forward "pages/rgpd/section-accompagnement";
+@forward "pages/rgpd/section-etapes";
 
 @forward "utils/text-utils";
