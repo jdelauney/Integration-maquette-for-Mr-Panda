@@ -39,7 +39,10 @@
       margin-top: 48px;
       background-color: var(--thm-primary-alt);
 
-      &::before {
+      outline: 3px solid var(--thm-white);
+      outline-offset: -14px;
+
+     /* &::before {
         position: absolute;
         box-sizing: border-box;
         content: "";
@@ -50,7 +53,7 @@
         transform: translate(-50%, -50%);
         background-color: transparent;
         border: 3px solid var(--thm-white);
-      }
+      }*/
 
       &__title {
         font-family: var(--thm-font-2);
