@@ -1,0 +1,99 @@
+@use "../../abstracts/mixins" as mixins;
+
+.rgpd-section-contact {
+  position: relative;
+  box-sizing: border-box;
+  width: 1469px;
+  margin: 128px auto 0 auto;
+
+  &__inner {
+    display: flex;
+    gap: 60px;
+
+
+  }
+
+  &__left {
+
+    & .section-title,
+    & .section-title-tagline {
+      text-align: left;
+    }
+
+    & > p {
+      font-family: var(--thm-font);
+      font-size: mixins.toEm(20);
+      font-weight: 600;
+    }
+
+
+  }
+
+  &__right {
+    width: 510px;
+    background-color: var(--thm-white);
+    box-shadow: 0px 0px 40px var(--thm-muted);
+
+  }
+
+  &__subtitle {
+    margin-top: 32px;
+  }
+
+  &__form-box {
+    padding: 48px;
+
+
+    &__title {
+      font-family: var(--thm-font-2);
+      font-size: mixins.toEm(50);
+      font-weight: 600;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      input[type="text"],
+      textarea  {
+        font-family: var(--thm-font);
+        font-size: mixins.toEm(16);
+        border: 1px solid #CCCCCD;
+        border-radius: 4px;
+        padding: 16px 24px;
+      }
+    }
+
+    &__check {
+      display: flex;
+
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input[type="checkbox"] {
+        margin-top: 4px;
+      }
+      label {
+        font-family: var(--thm-font);
+        font-size: mixins.toEm(13);
+        line-height: 1.8;
+        margin-left: 4px;
+        margin-top: 0;
+      }
+    }
+
+    &__submit {
+      margin-top: 32px;
+      padding-inline: 48px;
+    }
+
+
+  }
+
+}
