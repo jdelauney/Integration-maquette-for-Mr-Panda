@@ -1,4 +1,6 @@
 @use "sass:math";
+@use "variables" as *;
+
 // Utilities
 $browser-context-font-size: 16;
 
@@ -14,3 +16,84 @@ $browser-context-font-size: 16;
   @return math.div($pixels, $context) * 1em;
 }
 
+@function strip-unit($number) {
+  @return math.div($number , ($number * 0  + 1));
+}
+
+@mixin mq($breakpoint, $mode : mf) {
+
+  @if $mode == mf {
+    @if $breakpoint == mobile {
+      @media only screen and (min-width: $breakpoint-mobile) { @content }; //400px
+    }
+    @if $breakpoint == tablet {
+      @media only screen and (min-width: $breakpoint-tablet) { @content }; //600px
+    }
+    @if $breakpoint == tablet-medium {
+      @media only screen and (min-width: $breakpoint-tablet-medium) { @content }; //900px
+    }
+    @if $breakpoint == desktop {
+      @media only screen and (min-width: $breakpoint-desktop) { @content }; //1200px
+    }
+    @if $breakpoint == desktop-medium {
+      @media only screen and (min-width: $breakpoint-desktop-medium) { @content }; //1440px
+    }
+    @if $breakpoint == desktop-lg {
+      @media only screen and (min-width: $breakpoint-desktop-lg) { @content }; //1600px
+    }
+    @if $breakpoint == desktop-xlg {
+      @media only screen and (min-width: $breakpoint-desktop-xlg) { @content }; //1800px
+    }
+    @if $breakpoint == desktop-xxlg {
+      @media only screen and (min-width: $breakpoint-desktop-xxlg) { @content }; //2560px
+    }
+  }
+  @else {
+    @if $breakpoint == mobile {
+      @media only screen and (max-width: $breakpoint-mobile) { @content };    //400px
+    }
+    @if $breakpoint == tablet {
+      @media only screen and (max-width: $breakpoint-tablet) { @content };  //600px
+    }
+    @if $breakpoint == tablet-medium {
+      @media only screen and (max-width: $breakpoint-tablet-medium) { @content }; //900px
+    }
+    @if $breakpoint == desktop {
+      @media only screen and (max-width: $breakpoint-desktop) { @content };    //1200px
+    }
+    @if $breakpoint == desktop-medium {
+      @media only screen and (max-width: $breakpoint-desktop-medium) { @content };    //1440px
+    }
+    @if $breakpoint == desktop-lg{
+      @media only screen and (max-width: $breakpoint-desktop-lg) { @content };  //1600px
+    }
+    @if $breakpoint == desktop-xlg {
+      @media only screen and (max-width: $breakpoint-desktop-xlg) { @content };  //1800
+    }
+    @if $breakpoint == desktop-xxlg {
+      @media only screen and (max-width: $breakpoint-desktop-xxlg) { @content };  //2560
+    }
+  }
+}
+
+@mixin mq-up($size) {
+  $size: strip-unit($size);
+  @media (min-width: $size * 1px) {
+    @content;
+  }
+}
+
+@mixin mq-down($size) {
+  $size: strip-unit($size);
+  @media (max-width: $size * 1px) {
+    @content;
+  }
+}
+
+@mixin mq-between($down, $up) {
+  $down: strip-unit($down);
+  $up: strip-unit($up);
+  @media (min-width: $down * 1px) and (max-width: $up * 1px) {
+    @content;
+  }
+}
